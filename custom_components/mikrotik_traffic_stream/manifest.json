@@ -4,7 +4,7 @@
   "codeowners": [],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/rishie/mikrotik-traffic-stream",
+  "documentation": "https://github.com/fishie/ha-mikrotik-traffic-stream",
   "integration_type": "device",
   "iot_class": "local_push",
   "requirements": [],
