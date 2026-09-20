@@ -1,8 +1,9 @@
 # MikroTik Traffic Stream
 
 Home Assistant custom integration that keeps one connection to the RouterOS
-binary API open, runs `/interface/monitor-traffic` without `once`, and pushes
-every one-second sample into sensors. No polling.
+binary API open and runs `/interface/monitor-traffic` without `once` so the
+router streams a sample about once a second. Samples are aggregated over a
+configurable reporting interval and pushed into sensors. No polling.
 
 Sensors per interface: RX and TX, each as average, min and max over the
 reporting interval (default 5 seconds, changeable in the integration options).
