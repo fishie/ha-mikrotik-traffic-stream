@@ -1,0 +1,46 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to a MikroTik router",
+        "description": "Streams live throughput from the RouterOS binary API (port 8728, or 8729 with TLS).",
+        "data": {
+          "host": "Host",
+          "port": "Port (leave empty for the default)",
+          "use_tls": "Use TLS",
+          "verify_tls": "Verify TLS certificate",
+          "username": "Username",
+          "password": "Password",
+          "interfaces": "Interfaces, comma separated",
+          "interval": "Reporting interval in seconds"
+        },
+        "data_description": {
+          "interval": "Samples arrive from the router about once a second. Over each interval the min, max and average are reported. With 1 second all three are equal."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not connect to the router.",
+      "invalid_auth": "The router rejected the username or password.",
+      "router_error": "The router rejected the monitor-traffic command. See the log.",
+      "no_interfaces": "Enter at least one interface name.",
+      "unknown_interface": "The router did not report one of these interfaces. See the log."
+    },
+    "abort": {
+      "already_configured": "This router is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Reporting interval",
+        "data": {
+          "interval": "Reporting interval in seconds"
+        },
+        "data_description": {
+          "interval": "Samples arrive from the router about once a second. Over each interval the min, max and average are reported. With 1 second all three are equal."
+        }
+      }
+    }
+  }
+}
